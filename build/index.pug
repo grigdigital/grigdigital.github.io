@@ -18,33 +18,37 @@ block content
 		.container
 			.item-wrapper
 				header.item-title
+					img(src="assets/images/icon-design.png", alt="alt")
 					h3 Design Mussum Ipsum
 				.item-desc
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 			.item-wrapper
 				header.item-title
+					img(src="assets/images/icon-brainstorm.png", alt="alt")
 					h3 Braistorm Ipsum
 				.item-desc
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 			.item-wrapper
 				header.item-title
+					img(src="assets/images/icon-mobile.png", alt="alt")
 					h3 Mobile Apps Ipsum
 				.item-desc
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				
 	section.clients#clients
-		h2 Alguns de nossos Clientes
-		ul.list-clients
-			li
-				a(href="#") MonkeyBuzz
-			li
-				a(href="#") Parceiros da Educação
-			li
-				a(href="#") Moviment ARTE
-			li
-				a(href="#") TheKingCake
+		.container
+			h2 Alguns de nossos Clientes
+			ul.list-clients
+				li
+					a(href="#") MonkeyBuzz
+				li
+					a(href="#") Parceiros da Educação
+				li
+					a(href="#") Moviment ARTE
+				li
+					a(href="#") TheKingCake
 				
 	section.contato#contato
 		h2 Contato
@@ -55,7 +59,7 @@ block content
 			input(name="phone", type="phone", placeholder="Telefone", required)
 			input(name="empresa", type="name", placeholder="Empresa")
 			input(name="url", type="name", placeholder="Url do Site")
-			textarea(name="message")
-			input(type="button", value="Enviar")
+			textarea(name="message", placeholder="Mensagem", required)
+			input(type="button", class="btn-default", value="Enviar")
 
 	include includes/footer.pug

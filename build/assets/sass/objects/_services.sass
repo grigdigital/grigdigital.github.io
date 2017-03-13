@@ -1,7 +1,7 @@
 .services
-	width: calc(100% + 1em)
+	width: calc(100% + 2em)
 	margin-left: -1em
-	padding: 5em
+	padding: 2em
 	background: $black
 	color: $white
 	position: relative
@@ -19,13 +19,29 @@
 
 	> .container
 		display: flex
+		flex-wrap: wrap
 		justify-content: space-between
 		transform: rotate(-1deg)
 		margin: 0
 
 		> .item-wrapper
 			flex-basis: 30%
+			margin: 2em 0
+
+			@media (max-width: 850px)
+				flex-basis: 100%
+
+
+				> .item-desc
+					> p
+						text-align: center
+
+			@media (max-width: 968px)
+				flex-basis: 48%
 
 			> .item-title
 				margin-bottom: 1em
 				text-align: center
+
+				> img
+					margin: 1em 0

@@ -52,15 +52,13 @@ gulp.task('fonts', function() {
 gulp.task('images', function() {
 	return gulp.src('build/assets/images/**/*.{png,jpg,jpeg}')
 		.pipe(tinypng({
-			key: 'XQVIk6EjMvJX0hY9uhoxgT-DXOxFAtPn',
-			sigFile: 'images/.tinypng-sigs',
-			log: true
+			key: 'XQVIk6EjMvJX0hY9uhoxgT-DXOxFAtPn'
 		}))
 		.pipe(gulp.dest('./assets/images/'))
 });
 
 gulp.task('svg', function() {
-	return gulp.src('build/assets/images/**/*.svg')
+	return gulp.src('build/assets/images/**/*.{svg,png,jpg,jpeg}')
 		.pipe(gulp.dest('./assets/images/'))
 });
 
