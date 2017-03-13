@@ -1,0 +1,19 @@
+doctype
+html(lang='pt-BR')
+	block vars
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='theme-color', content='#242424') 
+		meta(name='description', content=description)
+		meta(name='author', content='Bruno Alves')
+		meta(name='keywords', content=keywords)
+		title #{title} | Agência Digital
+		
+		link(href='favicon.png', rel='icon')
+		link(rel="stylesheet", href="assets/css/main.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800|Oswald:300,500")
+	
+	body
+		block content

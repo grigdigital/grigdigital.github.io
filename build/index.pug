@@ -1,7 +1,61 @@
-doctype html
-html(lang='pt-br')
-	head
-		title Grig Digital
-		link(rel='stylesheet', src='assets/css/main.css')
-	body
-		h1 Hello World!
+extends layouts/layout
+
+block vars
+	- var title = 'Grig.'
+	- var keywords = 'Agência Digital'
+	- var description = 'Grig. é uma nova agência digital formada por uma equipe com mais de 10 anos de experiência no mercado de desenvolvimento web e marketing digital.'
+
+block content
+	include includes/header.pug
+	include includes/banner.pug
+	
+	section.quem-somos#quem-somos
+		h2 Quem Somos
+		p Somos uma empresa jovem, formada por uma equipe de profissionais com mais de 10 anos de experiência em desenvolvimento Web e Marketing Digital.
+		p Trabalhamos com o conceito de Agência Digital, buscamos sempre usar as melhores ferramentas e tecnologias para criar a solução essencial para a sua empresa.
+		
+	section.services#services
+		.container
+			.item-wrapper
+				header.item-title
+					h3 Design Mussum Ipsum
+				.item-desc
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			.item-wrapper
+				header.item-title
+					h3 Braistorm Ipsum
+				.item-desc
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			.item-wrapper
+				header.item-title
+					h3 Mobile Apps Ipsum
+				.item-desc
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				
+	section.clients#clients
+		h2 Alguns de nossos Clientes
+		ul.list-clients
+			li
+				a(href="#") MonkeyBuzz
+			li
+				a(href="#") Parceiros da Educação
+			li
+				a(href="#") Moviment ARTE
+			li
+				a(href="#") TheKingCake
+				
+	section.contato#contato
+		h2 Contato
+		
+		form(method="POST")
+			input(name="nome", type="name", placeholder="Nome", required)
+			input(name="email", type="email", placeholder="Email", required)
+			input(name="phone", type="phone", placeholder="Telefone", required)
+			input(name="empresa", type="name", placeholder="Empresa")
+			input(name="url", type="name", placeholder="Url do Site")
+			textarea(name="message")
+			input(type="button", value="Enviar")
+
+	include includes/footer.pug

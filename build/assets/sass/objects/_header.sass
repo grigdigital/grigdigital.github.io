@@ -1,0 +1,30 @@
+.header-site
+	background: $black
+	box-shadow: 0 4px 4px darken($black, 2.5%)
+	z-index: 10
+	position: relative
+
+	> .container
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		> .logo
+			width: 50%
+			max-width: 200px
+			margin: 0.5em
+
+			path
+				fill: darken($white, 10%)
+
+		> .menu-site
+			> ul
+				width: 100%
+				display: flex
+				list-style: none
+				> li
+					margin: 0 0.5em
+					> a
+						color: darken($white, 10%)
+						font-family: 'Open Sans', sans-serif
+						font-size: 18px
