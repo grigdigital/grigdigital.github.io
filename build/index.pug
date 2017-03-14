@@ -56,12 +56,20 @@ block content
 		h2 Contato
 		
 		form(method="POST")
-			input(name="nome", type="name", placeholder="Nome", required)
-			input(name="email", type="email", placeholder="Email", required)
-			input(name="phone", type="phone", placeholder="Telefone", required)
+			.form-input
+				input(name="nome", type="name", placeholder="Nome", required)
+				span.required •
+			.form-input
+				input(name="email", type="email", placeholder="Email", required)
+				span.required •
+			.form-input
+				input(name="phone", type="phone", placeholder="Telefone", required)
+				span.required •
 			input(name="empresa", type="name", placeholder="Empresa")
 			input(name="url", type="name", placeholder="Url do Site")
-			textarea(name="message", placeholder="Mensagem", required)
-			input(type="button", class="btn-default", value="Enviar")
+			.message-required
+				textarea(name="message", placeholder="Mensagem", required)
+				span.required •
+			input(type="submit", class="btn-default", value="Enviar")
 
 	include includes/footer.pug
