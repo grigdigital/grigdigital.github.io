@@ -23,12 +23,13 @@
 					background-size: contain
 					background-position: center center
 					background-repeat: no-repeat
+					filter: grayscale(.8)
 					text-indent: -50000rem
 					padding: 2rem
 					transition: all .4s ease-in-out
 
 					&:hover
-						background-color: lighten($white, 10%)
+						filter: grayscale(0)
 						transition: all .4s ease-in-out
 
 				&:nth-child(1)
@@ -41,12 +42,15 @@
 
 				&:nth-child(3)
 					a
+						background-image: url(../images/protervac.png)
+				&:nth-child(4)
+					a
 						background-image: url(../images/logo-parceiros.png)
 
-				&:nth-child(4)
+				&:nth-child(5)
 					a
 						background-image: url(../images/movimentarte.png)
 
-				&:nth-child(5)
+				&:nth-child(6)
 					a
 						background-image: url(../images/kingcake.png)
