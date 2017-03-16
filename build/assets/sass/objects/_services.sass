@@ -5,11 +5,26 @@
 	background: $black
 	color: $white
 	position: relative
-	transform: rotate(1deg)
+	// transform: rotate(1deg)
 	z-index: 10
 
 	display: flex
 	justify-content: center
+
+	&::after,
+	&::before
+		content: ''
+		width: 100%
+		height: 30px
+		background-color: $black
+		position: absolute
+		transform: rotate(1deg)
+
+	&::after
+		top: -15px
+
+	&::before
+		bottom: -15px
 
 	p
 		font-family: 'Oswald', sans-serif
@@ -21,7 +36,7 @@
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
-		transform: rotate(-1deg)
+		// transform: rotate(-1deg)
 		margin: 0
 
 		> .item-wrapper
@@ -40,10 +55,9 @@
 
 				> img
 					margin: 1em 0
-					box-shadow: 1px 2px 4px darken($black, 100%)
-					border-radius: 100%
-					transition: .2s ease-in-out
+					transition: all .2s ease-in-out
 
-					&:hover
-						transform: scale(0.9)
-						transition: .2s ease-in-out
+			&:hover
+				img
+					transform: scale(1.1)
+					transition: all .2s ease-in-out
